@@ -22,19 +22,6 @@ export const useShoppingCart = () => {
       //BORRAR EL PRODUCTO SI COUNT >= 0
       const { [product.id]: toDelete, ...rest } = oldShoppingCart;
       return rest;
-
-      // if(count === 0){
-      //OPCION A
-      //  delete({...oldShoppingCart})[product.id]
-      //   return {}
-
-      //OPCION B
-      //   const {[product.id]: toDelete, ...rest} = oldShoppingCart;
-      //       return rest;
-      // } return{
-      //         ...oldShoppingCart,
-      //         [product.id]: {...product, count}
-      //        }
     });
   };
 
