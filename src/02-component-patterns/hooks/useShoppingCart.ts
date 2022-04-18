@@ -3,44 +3,30 @@ import { Product, ProductInCart } from "../interfaces/interfaces";
 import { products } from "../data/products";
 
 export const useShoppingCart = () => {
-  const [shoppingCart, setShoppingCart] = useState<{ [key: string]: ProductInCart }>({});
+  const [shoppingCart, setShoppingCart] = useState<{
+    [key: string]: ProductInCart;
+  }>({});
 
-  const onProductCountChange = ({ count, product }: { count: number; product: Product}) => {
-        setShoppingCart((oldShoppingCart) => {
-            const productInCart: ProductInCart = oldShoppingCart[product.id] || {
-                ...product,
-                count: 0,
-            };
+  const onProductCountChange = ({ count, product}: {count: number; product: Product }) => {
+    setShoppingCart((oldShoppingCart) => {
+      if (count === 0) {
+        //   OPCION A
+        // delete({...oldShoppingCart})[product.id]
+        //  return {}
 
-      if (Math.max(productInCart.count + count, 0) > 0) {
-        productInCart.count += count;
-        return {
-            ...oldShoppingCart,
-            [product.id]: productInCart,
-            };
+        //   OPCION B
+        const { [product.id]: toDelete, ...rest } = oldShoppingCart;
+        return rest;
       }
-      //BORRAR EL PRODUCTO SI COUNT >= 0
-      const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-      return rest;
-
-      // if(count === 0){
-      //OPCION A
-      //  delete({...oldShoppingCart})[product.id]
-      //   return {}
-
-      //OPCION B
-      //   const {[product.id]: toDelete, ...rest} = oldShoppingCart;
-      //       return rest;
-      // } return{
-      //         ...oldShoppingCart,
-      //         [product.id]: {...product, count}
-      //        }
+      return {
+        ...oldShoppingCart,
+        [product.id]: { ...product, count },
+      };
     });
   };
-
   return {
     products,
     shoppingCart,
-    onProductCountChange
+    onProductCountChange,
   };
 };
