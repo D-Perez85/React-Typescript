@@ -12,7 +12,8 @@ import { Props as ProductTitleProps } from "../components/ProductTitle";
   export interface ProductContextProps {
     counter: number,
     increaseBy: (value: number) => void; 
-    product: Product
+    product: Product, 
+    maxCount?: number
   }
 
   export interface ProductCardHOCProps {
@@ -30,3 +31,8 @@ import { Props as ProductTitleProps } from "../components/ProductTitle";
  export interface ProductInCart extends Product{
    count: number
  }
+
+ export interface InitialValues {
+  count?: number;
+  maxCount?: number;
+}
