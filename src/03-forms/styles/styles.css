@@ -17,9 +17,9 @@ button {
 }
 
 span, .error-message {
-    color: red;
+    color: green;
 }
 
 .has-error {
-    border: 1px solid red;
+    border: 1px solid green;
 }
