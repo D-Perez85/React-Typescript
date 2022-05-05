@@ -33,7 +33,7 @@ const FormikBasicPage = () => {
     return errors;
   };
 
-  const { handleChange, values, handleSubmit, errors, touched, handleBlur } =
+  const { handleChange, values, handleSubmit, errors, touched, handleBlur, resetForm } =
     useFormik({
       initialValues: {
         firstName: "",
@@ -42,6 +42,7 @@ const FormikBasicPage = () => {
       },
       onSubmit: (values) => {
         console.log(values);
+        resetForm(); 
       },
       validate,
     });
