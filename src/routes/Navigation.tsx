@@ -5,7 +5,6 @@ import {
   NavLink
 } from 'react-router-dom';
 import { RegisterPage } from '../03-forms/pages/RegisterPage';
-
 import logo from '../logo.svg';
 
 export const Navigation = () => {
