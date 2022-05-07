@@ -12,6 +12,7 @@ export const RegisterFormikPage = () => {
         initialValues={{
           firstName: "",
           lastName: "",
+          emai: "",
           password: "",
           password2: "",
         }}
@@ -27,6 +28,9 @@ export const RegisterFormikPage = () => {
             .min(3, "Debe contener al menos 3 caracteres")
             .max(10, "El maximo es de 10 caracteres")
             .required("Este campo es requerido"),
+            email: Yup.string()
+            .email('email is wrong')
+            .required('Este campo es requerido'),
           password: Yup.string()
             .required("Este campo es requerido")
             .matches(
@@ -38,13 +42,15 @@ export const RegisterFormikPage = () => {
             .oneOf([Yup.ref("password"), null], "Passwords deben coincidir"),
         })}
       >
-        {({ handleReset }) => (
+        {({ handleReset, isValid }) => (
           <Form>
             <MyTextInput label="First Name" name="firstName" placeholder="Jhon"/>
             <MyTextInput label="Last Name" name="lastName" placeholder="Doe" />
+            <MyTextInput label="Email" name="email" placeholder="Jhon@gmail.com" />
+
             <MyTextInput label="Password" name="password" type="password" placeholder="°°°°°°°°°"/>
             <MyTextInput label="Confirm Password" name="password2" type="password" placeholder="°°°°°°°°°"/>
-              <button type="submit">Submit</button>
+              <button type="submit" disabled={!isValid}>Submit</button>
               <button onClick={handleReset}> Reset</button>
           </Form>
         )}
