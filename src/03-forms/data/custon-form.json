@@ -46,5 +46,30 @@
         "value": 5
       }
     ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteMovie",
+    "label": "Favorite Movie",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "label": "SuperMan"
+      },
+      {
+        "id": 2,
+        "label": "MetalSlug II"
+      },
+      {
+        "id": 3,
+        "label": "Titanic"
+      }
+    ],
+    "validations": [
+      {
+        "type": "required"
+      }
+    ]
   }
 ]
