@@ -1,34 +1,50 @@
 [
-    {
-        "type": "input",
-        "name": "firstName",
-        "placeholder": "Damian",
-        "label": "First Name",
-        "value": "",
-        "validations": [
-            {
-                "type": "required"
-            },
-            {
-                "type": "minLength",
-                "value": 5
-            }
-        ]
-    },
-    {
-        "type": "input",
-        "name": "lastName",
-        "placeholder": "Perez",
-        "label": "Last Name",
-        "value": "",
-        "validations": [
-            {
-                "type": "required"
-            },
-            {
-                "type": "minLength",
-                "value": 5
-            }
-        ]
-    }
+  {
+    "type": "input",
+    "name": "firstName",
+    "placeholder": "Damian",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "input",
+    "name": "lastName",
+    "placeholder": "Perez",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "JhonDoe@gmail.com",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required"
+      },
+      {
+        "type": "minLength",
+        "value": 5
+      }
+    ]
+  }
 ]
