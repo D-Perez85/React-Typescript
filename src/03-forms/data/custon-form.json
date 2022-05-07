@@ -1,75 +1,80 @@
 [
   {
-    "type": "input",
-    "name": "firstName",
-    "placeholder": "Damian",
-    "label": "First Name",
-    "value": "",
-    "validations": [
-      {
-        "type": "required"
-      },
-      {
-        "type": "minLength",
-        "value": 5
-      }
-    ]
+      "type": "input",
+      "name": "firstName",
+      "placeholder": "Damian",
+      "label": "First Name",
+      "value": "",
+      "validations": [
+          {
+              "type": "required"
+          },
+          {
+              "type": "minLength",
+              "value": 5
+          },
+          {
+            "type": "maxLength",
+            "value": 12
+          }
+      ]
   },
   {
-    "type": "input",
-    "name": "lastName",
-    "placeholder": "Perez",
-    "label": "Last Name",
-    "value": "",
-    "validations": [
-      {
-        "type": "required"
-      },
-      {
-        "type": "minLength",
-        "value": 5
-      }
-    ]
+      "type": "input",
+      "name": "lastName",
+      "placeholder": "Perez",
+      "label": "Last Name",
+      "value": "",
+      "validations": [
+          {
+              "type": "required"
+          },
+          {
+            "type": "minLength",
+            "value": 5
+        },
+        {
+          "type": "maxLength",
+          "value": 12
+        }
+      ]
   },
   {
-    "type": "email",
-    "name": "email",
-    "placeholder": "JhonDoe@gmail.com",
-    "label": "Email",
-    "value": "",
-    "validations": [
-      {
-        "type": "required"
-      },
-      {
-        "type": "minLength",
-        "value": 5
-      }
-    ]
+      "type": "email",
+      "name": "email",
+      "placeholder": "damian@google.com",
+      "label": "Email",
+      "value": "",
+      "validations": [
+          {
+              "type": "required"
+          },
+          {
+              "type": "email"
+          }
+      ]
   },
   {
-    "type": "select",
-    "name": "favoriteMovie",
-    "label": "Favorite Movie",
-    "value": "",
-    "options": [
-      {
-        "id": 1,
-        "label": "SuperMan"
+      "type": "select",
+      "name": "favoriteMovie",
+      "label": "Favorite Movie",
+      "value": "",
+      "options": [{
+          "id": 1,
+          "label": "SuperMan"
       },
       {
-        "id": 2,
-        "label": "MetalSlug II"
+          "id": 2,
+          "label": "MetalSlahs II"
       },
       {
-        "id": 3,
-        "label": "Titanic"
-      }
-    ],
-    "validations": [
-      {
-        "type": "required"
-      }
-    ]
+          "id": 3,
+          "label": "Monzon"
+      }],
+      "validations": [
+          {
+              "type": "required"
+          }
+      ]
   }
 ]
