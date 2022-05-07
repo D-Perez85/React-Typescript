@@ -26,6 +26,7 @@ export const FormikComponents = () => {
           jobType: Yup.string()
           .notOneOf(["it-jr"], "Esta opción no es permitida.")
             .required("Requerido"),
+            
         })}
       >
         {(formik) => (
