@@ -24,7 +24,10 @@ const ShoppingPage = () => {
             value={shoppingCart[product.id]?.count || 0}>
               <ProductImg className="custom-image" style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}/>
               <ProductTitle title={product.title} className="text-white text-bold"/>
-              <ProductButtons className="custom-buttons" style={{ display: "flex", justifyContent: "center" }}/>
+              <ProductButtons 
+              className="custom-buttons" 
+              style={{ display: "flex", justifyContent: "center" }}
+              />
           </ProductCard>
         ))}
       </div>
@@ -38,7 +41,10 @@ const ShoppingPage = () => {
             value={product.count}
             onChange={onProductCountChange}>
               <ProductImg className="custom-image" style={{ boxShadow: "10px 10px 10px rgba(0,0,0,0.2)" }}/>
-              <ProductButtons className="custom-buttons" style={{ display: "flex", justifyContent: "center" }}/>
+              <ProductButtons 
+              className="custom-buttons" 
+              style={{ display: "flex", justifyContent: "center" }}
+              />
           </ProductCard>
         ))}
       </div>
